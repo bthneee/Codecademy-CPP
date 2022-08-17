@@ -1,0 +1,25 @@
+#include <iostream>
+
+int main() {
+  
+  int pesos;
+  int reias;
+  int soles;
+  double dollars;
+
+  std::cout << "Enter number of Colombian Pesos: ";
+  std::cin >> pesos;
+  std::cout << "Enter number of Brazilian Reais: ";
+  std::cin >> reias;
+  std::cout << "Enter number of Peruvian Soles: ";
+  std::cin >> soles;
+  
+  double conversion_rateP = 0.00024;
+  double conversion_rateR = 0.19;
+  double conversion_rateS = 0.26;
+
+  dollars = (conversion_rateP * pesos) + (conversion_rateR * reias) + (conversion_rateS * soles);
+
+  std::cout << "US Dollars = $" << dollars << "\n";
+
+}
