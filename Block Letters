@@ -1,0 +1,15 @@
+//My initials are B G
+#include <iostream>
+
+int main() {
+
+  std::cout << "B B B B           G G G\n";
+  std::cout << "B       B       G       G\n";
+  std::cout << "B       B       G\n";
+  std::cout << "B B B B         G G G G G\n";
+  std::cout << "B       B       G       G\n";
+  std::cout << "B       B       G       G\n";
+  std::cout << "B B B B           G G G\n";
+  
+  return 0;
+}
