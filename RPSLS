@@ -1,0 +1,148 @@
+/*
+  Rock Paper Scissors Lizard Spock
+  Based off the game modification from The Big Bang Theory
+*/
+#include <iostream>
+#include <stdlib.h>
+
+int main() {
+
+  srand(time(NULL));
+  int pc = rand() % 5 + 1;
+  int user = 0;
+
+  std::cout << "Rock Paper Scissors Lizard Spock! \n";
+  std::cout << "1) Rock ✊\n";
+  std::cout << "2) Paper ✋\n";
+  std::cout << "3) Scissors ✌️\n";
+  std::cout << "4) Lizard 🦎\n";
+  std::cout << "5) Spock 🖖\n";
+  std::cout << "   Shoot!\n";
+  std::cout << "Enter your choice (1-5): ";
+  std::cin >> user;
+
+//------------------Invalid Input---------------------
+/*  if (user != 1 || user != 2 || user != 3 || user != 4 || user != 5)
+  {
+    std::cout << "\nPlease enter a valid input.\n";
+  }
+*/
+//-------------------It's a tie!------------------------
+
+  if (user == pc)
+  {
+    std::cout << "\nIt's a tie!\n";
+  }
+
+//---------------------User uses Rock!-------------------
+
+  if (user == 1)
+  {
+    if (pc == 3)
+    {
+      std::cout << "\nRock crushes Scissors!\n  You win!\n";
+    }
+    else if (pc == 2)
+    {
+      std::cout << "\nPaper covers Rock!\n  PC wins!\n";
+    }
+    else if (pc == 4)
+    {
+      std::cout << "\nRock crushes Lizard!\n  You win!\n";
+    }
+    else if (pc == 5)
+    {
+      std::cout << "\nSpock vaporizes Rock!\n PC wins!\n";
+    }
+  }
+ 
+//--------------------User uses Paper!-------------------
+
+  if (user == 2)
+  {
+    if (pc == 1)
+    {
+      std::cout << "\nPaper covers Rock!\n  You win!\n";
+    }
+    else if (pc == 3)
+    {
+      std::cout << "\nScissors cuts Paper!\n  PC wins!\n";
+    }
+    else if (pc == 4)
+    {
+      std::cout << "\nLizard eats Paper!\n  PC wins!\n";
+    }
+    else if (pc == 5)
+    {
+      std::cout << "\nPaper disproves Spock!\n  You win!\n";
+    }
+  }
+
+//-------------------User uses Scissors!-----------------
+
+  if (user == 3)
+  {
+    if (pc == 1)
+    {
+      std::cout << "\nRock crushes Scissors!\n  PC wins!\n";
+    }
+    else if (pc == 2)
+    {
+      std::cout << "\nScissors cuts Paper!\n  You win!\n";
+    }
+    else if (pc == 4)
+    {
+      std::cout << "\nScissors decapitate Lizard!\n You win!\n";
+    }
+    else if (pc == 5)
+    {
+      std::cout << "\nSpock smashes Scissors!\n PC wins!\n";
+    }
+  }
+
+//------------------User uses Lizard!--------------------
+
+if (user == 4)
+{
+  if (pc == 1)
+  {
+    std::cout << "\nRock crushes Lizard!\n  PC wins!\n";
+  }
+  else if (pc == 2)
+  {
+    std::cout << "\nLizard eats Paper!\n  You win!\n";
+  }
+  else if (pc == 3)
+  {
+    std::cout << "\nScissors decapitates Lizard!\n  PC wins!\n";
+  }
+  else if (pc == 5)
+  {
+    std::cout << "\nLizard poisons Spock!\n   You win!\n";
+  }
+}
+
+//------------------User uses Spock!---------------------
+
+if (user == 5)
+{
+  if (pc == 1)
+  {
+    std::cout << "\nSpock vaporizes Rock!\n   You win!\n";
+  }
+  else if (pc == 2)
+  {
+    std::cout << "\nPaper disproves Spock!\n  PC wins!\n";
+  }
+  else if (pc == 3)
+  {
+    std::cout << "\nSpock smashes Scissors!\n   You win!\n";
+  }
+  else if (pc == 4)
+  {
+    std::cout << "\nLizard poisons Spock!\n   PC wins!\n";
+  }
+}
+
+  return 0;
+}
