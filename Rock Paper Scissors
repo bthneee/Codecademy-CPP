@@ -1,0 +1,85 @@
+/*
+  Rock Paper Scissors Lizard Spock
+  Based off the game modification from The Big Bang Theory
+*/
+#include <iostream>
+#include <stdlib.h>
+
+int main() {
+
+  srand(time(NULL));
+  int pc = rand() % 3 + 1;
+  int user = 0;
+
+  std::cout << "Rock Paper Scissors! \n";
+  std::cout << "1) Rock ✊\n";
+  std::cout << "2) Paper ✋\n";
+  std::cout << "3) Scissors ✌️\n";
+  std::cout << "   Shoot!\n";
+  std::cout << "Enter your choice (1-3): ";
+  std::cin >> user;
+
+//------------------Invalid Input---------------------
+  if (user != 1 || user != 2 || user != 3)
+  {
+    std::cout << "\nPlease enter a valid input.\n";
+  }
+
+//-------------------It's a tie!------------------------
+
+  if (user == pc)
+  {
+    std::cout << "\nIt's a tie! Again!\n\n";
+    std::cout << "Rock Paper Scissors! \n";
+    std::cout << "1) Rock ✊\n";
+    std::cout << "2) Paper ✋\n";
+    std::cout << "3) Scissors ✌️\n";
+    std::cout << "   Shoot!\n";
+    std::cout << "Enter your choice (1-3): ";
+    std::cin >> user;
+  }
+
+//---------------------User uses Rock!-------------------
+
+  if (user == 1)
+  {
+    if (pc == 3)
+    {
+      std::cout << "\nRock crushes Scissors!\n  You win!\n";
+    }
+    else if (pc == 2)
+    {
+      std::cout << "\nPaper covers Rock!\n  PC wins!\n";
+    }
+  }
+ 
+//--------------------User uses Paper!-------------------
+
+  if (user == 2)
+  {
+    if (pc == 1)
+    {
+      std::cout << "\nPaper covers rock!\n  You win!\n";
+    }
+    else if (pc == 3)
+    {
+      std::cout << "\nScissors cuts paper!\n  PC wins!\n";
+    }
+  }
+
+//-------------------User uses Scissors!-----------------
+
+  if (user == 3)
+  {
+    if (pc == 1)
+    {
+      std::cout << "\nRock crushes Scissors!\n  PC wins!\n";
+    }
+    else if (pc == 2)
+    {
+      std::cout << "\nScissors cuts Paper!\n  You win!\n";
+    }
+  }
+
+  return 0;
+}
