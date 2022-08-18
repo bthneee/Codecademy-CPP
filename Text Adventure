@@ -1,0 +1,189 @@
+/*
+  This game show script is taken and modified from the following link:
+  https://www.esl-lab.com/difficult/game-show-script/
+  */
+#include <iostream>
+
+int main() {
+
+//----------------------Introduction---------------------
+  std::cout << "Game Show Host: \n    Thank you, thank you and welcome to everyone’s favorite game show, Unbelievable Trivia. \n    Today’s contestant, Julie Jones, has just entered our bonus round and is trying to win our grand prize, \n    $30,000 in cash and an all-expense paid, six-day vacation to China!\n\n";
+
+  std::cout << "Host: \n    Okay, Julie. In order to win the grand prize, you must answer all four of the bonus questions correctly. \n    All of the questions are true or false. \n    If false, you must make the statement true by giving the correct information. \n    If not, you go home with our consolation prize: \n       A fine set of encyclopedias on home repairs!\n\n"; 
+
+  std::cout << "Crowd:[Ohh]\n\n";
+
+  std::cout << "Game Show Host: \n    Remember. When the buzzer goes off, you must give your answer. \n    Are you ready?\n\n";
+
+  std::cout << "Julie: \n   I’m ready.\n\n";
+
+//-----------------------------------Question 1-------------------------------------------
+
+  std::cout << "Host: \n    The first question: \n      A cat has 32 muscles in each ear. True or False?\n";
+  std::cout << "      Please enter T or F: ";
+  char answer1;
+  std::cin >> answer1;
+
+  //----------------------------------ENDING 1 & 2---------------------------------------
+  switch (answer1)
+  {
+    case 'T': case 't':
+    std::cout << "\nHost: \n    You are CORRECT!\n\n"; break;
+    case 'F': case 'f':
+    std::cout << "\nHost: \n    You are... WRONG!\n";
+    std::cout << "    Ohh, out on the first question! Better luck next time!\n";
+    std::cout << "Thank you Julie for coming on the show! \nAnd to all of you watching, see you next time!\n\n                THE END\n"; return 0;
+    default:
+    std::cout << "\nHost: \n    What kind of answer is that? \n    Sorry, but you! are! DISQUALIFIED!\n    Thank you everybody and goodnight!\n\n                THE END\n"; return 0;
+  }
+
+//-------------------------------------Question 2---------------------------------------
+
+  std::cout << "Host: \n    Question number two: \n      A tuna is the only fish that can blink with both eyes. True or False?\n";
+  char answer2;
+  std::cout << "      Please enter T or F: ";
+  std::cin >> answer2;
+
+  //-----------------------------------ENDING 3, 4 & 5------------------------------------
+  int answer2a;
+  int shark = 1;
+  int dolphin = 2;
+  int whale = 3;
+  int swordfish = 4;
+
+  switch (answer2)
+  {
+    case 'T': case 't':
+    std::cout << "\nHost: \n    WRONG!\n    Gosh, and we were halfway there! \n     The only fish that can blink with both eyes is a SHARK!\n   Thank you Julie, we'll see you all again next time.\n\n";
+    std::cout << "                THE END\n"; 
+    return 0;
+
+    case 'F': case 'f':
+    std::cout << "\nHost: \n    That's right! But which of the following animals CAN blink with both eyes?\n";
+    std::cout << "    1) Shark\n    2) Dolphin\n    3) Whale\n    4) Swordfish\n";
+    std::cout << "    Enter the number of the animal (1-4): ";
+    std::cin >> answer2a;  
+      if (answer2a != 1)
+      {
+        std::cout << "\nHost:\n    Nope! The correct answer was SHARK!";
+        std::cout << "\n    That was a tricky one! Well, try your luck next time, Julie. \n    Thank you for coming on the show, and goodnight everyone!\n\n                THE END\n";
+        return 0;
+      }
+      else if (answer2a == 1)
+      {
+        std::cout << "\nHost:\n     That's correct! Alright, let's go! We're halfway to the grand prize!\n\n"; break;
+      }
+      else
+      {
+        std::cout << "\n\nHost: \n    What kind of answer is that? \n    Sorry, but you! are! DISQUALIFIED!\n    Thank you everybody and goodnight!\n\n                THE END\n"; 
+      return 0;
+      }
+    default:
+      std::cout << "\n\nHost: \n    What kind of answer is that? \n    Sorry, but you! are! DISQUALIFIED!\n    Thank you everybody and goodnight!\n\n                THE END\n"; 
+      return 0;
+  }
+
+//---------------------------------------QUESTION 3--------------------------------------
+
+  std::cout << "Host:\n    Number three:\n      An elephant has the largest eyes in the world. True or False?\n";
+  std::cout << "      Please enter T or F: ";
+  char answer3;
+  std::cin >> answer3;
+
+  //--------------------------------ENDING 6, 7, & 8-------------------------------------
+  switch (answer3)
+  {
+    case 'T': case 't':
+    std::cout << "\nHost:\n    No way Jose! The largest eyes in the world belong to the GIANT SQUID!\n";
+    std::cout << "    We were almost there! I'm so sorry, better luck next time!\n";
+    std::cout << "    Thank you to Julie for coming onto the show, and to you, the viewers. See you all next time.\n\n                THE END\n";
+    return 0;
+
+    case 'F': case 'f':
+    std::cout << "\nHost:\n    Yes! But which of the following animals HAVE the largest eyes in the world?";
+    std::cout << "\n    1) Whale\n    2) Owl\n    3) Ostrich\n    4) Giant Squid";
+    std::cout << "\n      Enter the number of the animal (1-4): ";
+    int answer3a;
+    std::cin >> answer3a;
+    if (answer3a != 4)
+      {
+        std::cout << "\nHost:\n    Nope! The correct answer was the GIANT SQUID!";
+        std::cout << "\n    The answer was kind of in the name, Julie. \"Giant\" squid?\n    Anyway, thank you for coming on the show, and goodnight everyone!\n\n                THE END\n";
+        return 0;
+      }
+      else if (answer3a == 4)
+      {
+        std::cout << "\nHost:\n     EXACTAMUNDO! \n     Julie, you're almost on your way to an all-expense paid vacation to CHINA! Woohoo!!\n\n"; break;
+      }
+      else
+      {
+        std::cout << "\n\nHost: \n    What kind of answer is that? \n    Sorry, but you! are! DISQUALIFIED!\n    Thank you everybody and goodnight!\n\n                THE END\n"; 
+      return 0;
+      }
+    default:
+      std::cout << "\n\nHost: \n    What kind of answer is that? \n    Sorry, but you! are! DISQUALIFIED!\n    Thank you everybody and goodnight!\n\n                THE END\n"; 
+      return 0;
+  }
+
+//-----------------------------------Question 4------------------------------------------
+
+  std::cout << "\nHost:\n    Now, the last question:\n      The national anthem of Greece has 134 verses. True or False?\n";
+  std::cout << "      Please enter T or F: ";
+  char answer4;
+  std::cin >> answer4;
+
+  //-------------------------------ENDING 9, 10, & 11------------------------------------
+  int answer4a;
+  int retry = 0;
+  int verses = 158;
+
+  switch (answer4)
+  {
+    case 'T': case 't':
+    std::cout << "\nHost:\n    Well, Julie, it's time to pack your bags. Because that's absolutely WRONG!\n    It was a great ride while it lasted Julie. Maybe it'll work out next time. \n    Thank you all, see you next time.\n\n                THE END\n";
+    return 0;
+
+    case 'F': case 'f':
+    std::cout << "\nHost:\n    Ohhh you're so close!! How many verses does the anthem actually have?\n";
+    std::cout << "      Please enter a number: ";
+    std::cin >> answer4a;
+      if (answer4a != verses)
+      {
+        std::cout << "\nHost:\n    That number is incorrect!\n    BUT! I'm feeling a little generous, seeing as how you've come this far. I'll give you 3 more tries.";
+        for(int i = 0; i < 3; i++)
+        {          
+          std::cout << "\n      Enter your guess: ";
+          std::cin >> retry;
+          if (i == 2 && retry != verses)
+          {
+            std::cout << "\nHost:\n    Well, Julie, it's time to pack your bags. Because that's absolutely WRONG!\n    It was a great ride while it lasted Julie. Maybe it'll work out next time. \n    Thank you all, see you next time.\n\n                THE END\n";
+              return 0;
+          }
+          else if (retry != verses)
+          {
+            std::cout << "\nHost:\n    Nope! Try again!";
+          }
+          if (retry == verses)
+          {
+            std::cout << "\nHost:\n    Well, Julie, it's time to pack your bags.";
+            std::cout << "\n\nJulie:\n    Did I win?";
+            std::cout << "\n\nHost:\n    Because YOU'RE OFF TO CHINA!!\n    You pack your bags, and we'll pack your wallet.    \n    Well, that's all for today's show. See you next time.\n\n                THE END\n";
+            return 0;
+          }
+        }
+      }
+      if (answer4a == verses)
+      {
+        std::cout << "\nHost:\n    Well, Julie, it's time to pack your bags.";
+        std::cout << "\n\nJulie:\n    Did I win?";
+        std::cout << "\n\nHost:\n    Because YOU'RE OFF TO CHINA!!\n    You pack your bags, and we'll pack your wallet.    \n    Well, that's all for today's show. See you next time.\n\n                THE END\n";
+        return 0;
+      }
+      return 0;
+  
+  default:
+      std::cout << "\nHost: \n    What kind of answer is that? \n    Sorry, but you! are! DISQUALIFIED!\n    Thank you everybody and goodnight!\n\n                THE END\n"; 
+     return 0;
+  }
+return 0;
+}
